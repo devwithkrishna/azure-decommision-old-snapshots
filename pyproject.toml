@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "azure-decommision-old-snapshots"
+version = "0.1.0"
+description = "Automates the cleanup of outdated Azure snapshots"
+authors = ["githubofkrishnadhas <krishnadhasnk1997@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+azure-identity = "=1.18.0"
+azure-keyvault-secrets = "=4.8.0"
+argparse = "=1.4.0"
+python-dotenv = "=1.0.1"
+azure-mgmt-resource = "=23.1.1"
+azure-mgmt-resourcegraph = "=8.0.0"
+PyYAML = "=6.0.2"
+python-dateutil = "=2.9.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
