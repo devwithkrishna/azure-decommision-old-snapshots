@@ -71,7 +71,8 @@ def run_azure_rg_query_for_snapshots(subscription_ids: list[str], days: int):
               snapshot_source=properties.creationData.sourceResourceId, 
               environment=tags.Environment, 
               application_name=tags.ApplicationName, 
-              complete_tags=tags
+              complete_tags=tags,
+              age_in_days=age_in_days
             """
     logger.info(f"query is {query}")
     skip_token = None
@@ -96,6 +97,7 @@ def run_azure_rg_query_for_snapshots(subscription_ids: list[str], days: int):
         skip_token = response.skip_token
 
     return all_snapshots
+
 def main():
     """
     To test the script
