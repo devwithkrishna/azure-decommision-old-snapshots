@@ -35,4 +35,21 @@ This repository automates the cleanup of outdated Azure snapshots by identifying
 
    Ensure logging-conf.yaml exists in the root directory or provide a custom path via the LOGGING_CONFIG environment variable.
 
-4. 
+4. Initiate poetry venv
+    ```bash
+    poetry shell
+    ```
+5. Run the script:
+    ```python
+    poetry run python snapshot.py --subscription_name SUBSCRIPTION_NAME --days DAYS --DRY_RUN
+    ```
+   
+* --dry_run: If specified, the script will only log the snapshots that would be deleted without actually deleting them. This is useful for testing and verification before performing the actual deletion.
+
+
+
+## File Structure
+* snapshot.py: Main script for identifying and processing old snapshots.
+* resourcegraph.py: Contains functions to query Azure Resource Graph for subscriptions and snapshots.
+* setup_logging.py: Configures logging for the application.
+* README.md: Documentation for the repository.
