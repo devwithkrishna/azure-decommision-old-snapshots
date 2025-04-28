@@ -18,6 +18,7 @@ This repository automates the cleanup of outdated Azure snapshots by identifying
    - `AZURE_CLIENT_ID`
    - `AZURE_TENANT_ID`
    - `AZURE_CLIENT_SECRET`
+   - `LOGGING_CONFIG`=logging-conf.yaml
 
 ## Installation
 
