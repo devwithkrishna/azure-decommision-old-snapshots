@@ -18,8 +18,9 @@ updates:
     # Raise pull requests for version updates to pip against the `main` branch
     target-branch: "main"
     # Labels on pull requests for version updates only
-#    labels:
-#      - "pip dependencies"
+    labels:
+      - "patch"
+
     # Increase the version requirements for Composer only when required
     versioning-strategy: increase-if-necessary
     # Dependabot opens a maximum of five pull requests for version updates. Once there are five open pull requests from Dependabot,
