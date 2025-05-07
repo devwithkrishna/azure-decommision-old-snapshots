@@ -1,4 +1,5 @@
 import json
+from dataclasses import asdict
 
 
 def convert_list_to_json_file(data, file_name):
@@ -11,8 +12,10 @@ def convert_list_to_json_file(data, file_name):
 	if not isinstance(data, list):
 		raise ValueError("Input data must be a list of dictionaries.")
 
+	json_data = json.dumps([asdict(s) for s in data])
+
 	with open(file_name, 'w') as json_file:
-		json.dump(data, json_file, indent=4)
+		json.dump(json_data, json_file, indent=4)
 
 
 def main():

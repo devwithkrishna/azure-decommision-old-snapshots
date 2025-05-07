@@ -4,6 +4,8 @@ import azure.mgmt.resourcegraph as arg
 from azure.mgmt.resourcegraph.models import QueryRequest
 from setup_logging import setup_logging
 from dotenv import load_dotenv
+from data_class import Snapshots
+
 
 def run_azure_rg_query(subscription_names: list[str]):
     """
@@ -96,7 +98,10 @@ def run_azure_rg_query_for_snapshots(subscription_ids: list[str], days: int):
             break  # No more pages
         skip_token = response.skip_token
 
-    return all_snapshots
+    structured_resources = [Snapshots(**dict(resource)) for resource in all_snapshots]
+    return structured_resources
+
+    # return all_snapshots
 
 def main():
     """
