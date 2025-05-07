@@ -42,7 +42,7 @@ This repository automates the cleanup of outdated Azure snapshots by identifying
     ```
 5. Run the script:
     ```python
-    poetry run python snapshot.py --subscription_name SUBSCRIPTION_NAME --days DAYS --DRY_RUN
+    poetry run python snapshot.py --subscription_name SUBSCRIPTION_NAME --days DAYS --dry_run
     ```
    
 * --dry_run: If specified, the script will only log the snapshots that would be deleted without actually deleting them. This is useful for testing and verification before performing the actual deletion.
