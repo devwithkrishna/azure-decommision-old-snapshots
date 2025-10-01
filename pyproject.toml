@@ -12,7 +12,7 @@ argparse = "=1.4.0"
 python-dotenv = "=1.0.1"
 azure-mgmt-resource = "=23.3.0"
 azure-mgmt-resourcegraph = "=8.0.0"
-PyYAML = "=6.0.2"
+PyYAML = "=6.0.3"
 azure-mgmt-compute = "=34.1.0"
 
 
